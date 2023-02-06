@@ -44,3 +44,11 @@ variable "Map" {
 output "variable3" {
   value = var.Map["string"]
 }
+
+
+# variables from .tfvars
+variable "demo1" {}
+
+output "variable4" {
+  value = var.demo1
+}
