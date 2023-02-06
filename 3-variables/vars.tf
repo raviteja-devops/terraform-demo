@@ -46,7 +46,7 @@ output "variable3" {
 }
 
 
-# variables from .tfvars
+# fetching variables from .tfvars
 variable "demo1" {}
 
 output "variable4" {
