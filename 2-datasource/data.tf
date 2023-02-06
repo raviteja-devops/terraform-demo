@@ -20,8 +20,12 @@ data "aws_instance" "instance" {
   instance_id = "i-0d1569df18c7d5857"
 }
 
-output "instance" {
+output "private_ip" {
   value = data.aws_instance.instance.private_ip
+}
+
+output "public_ip" {
+  value = data.aws_instance.instance.public_ip
 }
 
 # fetching privateip of an instance
