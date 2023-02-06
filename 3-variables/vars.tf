@@ -42,5 +42,5 @@ variable "Map" {
 }
 
 output "variable3" {
-  value = var.Map.string
+  value = var.Map["string"]
 }
