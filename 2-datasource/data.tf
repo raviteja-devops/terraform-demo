@@ -15,6 +15,7 @@ output "ami" {
 # attributes are the output we get from data
 # It will fetch data, the data side key-words is called attributes
 
+
 data "aws_instance" "instance" {
   instance_id = "i-0d1569df18c7d5857"
 }
@@ -22,3 +23,6 @@ data "aws_instance" "instance" {
 output "instance" {
   value = data.aws_instance.instance.private_ip
 }
+
+# fetching privateip of an instance
+# arguement we gave is instance_id and attribute we fetch is private_ip
