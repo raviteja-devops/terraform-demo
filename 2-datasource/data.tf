@@ -28,5 +28,5 @@ output "public_ip" {
   value = data.aws_instance.instance.public_ip
 }
 
-# fetching privateip of an instance
+# fetching private and public ip of an instance
 # arguement we gave is instance_id and attribute we fetch is private_ip
