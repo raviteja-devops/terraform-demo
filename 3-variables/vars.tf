@@ -28,7 +28,7 @@ variable "List" {
 }
 
 output "variable2" {
-  value = var.List.2
+  value = var.List[2]
 }
 
 
