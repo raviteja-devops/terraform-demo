@@ -17,4 +17,4 @@ output "instance_profile" {
   value = try(aws_instance.web.*.id[1], "")
 }
 
-# id[1] keyword doesn't exist, so it try and if it not exist return a empty value "", instead of error
+# id[1] keyword doesn't exist, so it try and if it not exist return a empty value "", instead of error.
