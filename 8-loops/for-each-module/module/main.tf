@@ -13,14 +13,11 @@ data "aws_ami" "centos8" {
   owners = ["973714476881"]
 }
 
-
-# output "public_ip" {
-#   value = {
-#     for k, v in aws_instance.web : k => v.public_ip
-#   }
-# }
-
 variable "instance_type" {}
 variable "name" {}
+
+output "ec2" {
+  value = aws_instance.web
+}
 
 # we are just creating the resource and data, declaring 2 empty variables

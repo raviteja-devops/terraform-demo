@@ -23,6 +23,13 @@ module "ec2" {
   name = each.value.name
 }
 
+output "public_ip" {
+  value = {
+    for k, v in module.ec2 : k => v["ec2"].public_ip
+  }
+}
+# v is coming with ec2, v is component and it is coming with ec2 because we declared in module output, then public_ip
+
 # THIS IS THE BEST CODE, IF WE NEED TO ADD ANOTHER INSTANCE THEN WE ONLY NEED TO CHANGE IN "VARIABLE COMPONENTS" SIDE
 # WE ARE NOT TOUCHING MODULE
 
