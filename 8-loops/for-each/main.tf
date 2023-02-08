@@ -28,3 +28,16 @@ variable "components" {
     }
   }
 }
+
+output "public_ip" {
+  value = {
+    for k, v in aws_instance.web : k => v.public_ip
+  }
+}
+# k is key (cart, catalogue) and v is value (all the configuration of components)
+# k => v.id  ,  key = value.public_ip
+
+# complexity never arises with COUNT, it only deals with basic things
+# complex requirements require FOR-EACH
+
+# IF WE WANT TO WRITE THIS SAME IN BEST APPROACH IS BY USING MODULES
