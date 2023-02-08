@@ -40,4 +40,4 @@ output "public_ip" {
 # complexity never arises with COUNT, it only deals with basic things
 # complex requirements require FOR-EACH
 
-# IF WE WANT TO WRITE THIS SAME IN BEST APPROACH IS BY USING MODULES
+# IF WE WANT TO WRITE THIS SAME IN BEST APPROACH IS BY USING MODULES (iterate)
